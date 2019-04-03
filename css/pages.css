@@ -1,0 +1,60 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+/* general styling */
+*{
+  margin: 0;
+  font-family: "montserrat", sans-serif;
+}
+html{
+  background: #F3F3F3;
+}
+
+/* navbar top */
+nav{
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  height: 45px;
+}
+.profile-image{
+  position: absolute;
+  left: 3%;
+  height: 45px;
+}
+
+.profile-image img{
+  height:  45px;
+  border-radius: 50%;
+}
+#profile-image-overlay{
+  transition: 0.5s ease;
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+}
+#profile-image-overlay:hover{
+  background: rgba(128, 244, 224, 0.7);
+}
+.nav-links{
+  position: absolute;
+  right: 10px;
+  height:100%;
+  display: flex;
+  justify-items: center;
+}
+.nav-links a{
+  text-decoration: none;
+  color: black;
+  margin: auto 15px;
+  padding: 5px;
+  font-weight: 700;
+}
+.nav-links a:hover{
+  color: #80F4E0;
+}
+#active-tab{
+  border-bottom: 3px solid #80F4E0;
+}
