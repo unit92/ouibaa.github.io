@@ -131,9 +131,20 @@ main #view-window{
 /* Style the tab content */
 .tabcontent {
   float: left;
-  padding: 0px 12px;
   border: 1px solid #ccc;
   width: 100%;
   border-left: none;
   height: 100%;
+  position: relative;
+}
+.tabcontent .video-player{
+  position: relative;
+  width: 80%;
+  height: 100%;
+  margin: 0px auto;
+}
+iframe{
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
 }
