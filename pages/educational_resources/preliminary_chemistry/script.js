@@ -18,3 +18,7 @@ function openVideo(evt, videoName) {
   document.getElementById(videoName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+function returnToModuleSelect() {
+  window.location = "..";
+}
