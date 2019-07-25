@@ -1,7 +1,7 @@
 var viewer = OpenSeadragon({
   id: "openseadragon",
-  prefixUrl: "/openseadragon-bin-2.4.1/images/",
-  tileSources: "/Histology slide A/histologyA/rim.xml"
+  prefixUrl: "./openseadragon-bin-2.4.1/images/",
+  tileSources: "./Histology slide A/histologyA/rim.xml"
 });
 var viewPort = viewer.viewport;
 
@@ -9,7 +9,7 @@ window.onload = function() {
   video = document.createElement("video");
   video.setAttribute("id", "Myvideo");
   video.setAttribute("controls", "controls");
-  video.src = "/Histology slide A/videoA/Histology of the Kidney.mp4";
+  video.src = "./Histology slide A/videoA/Histology of the Kidney.mp4";
   video.addEventListener("timeupdate", myfunc, false);
   document.getElementById("myVideo").appendChild(video);
 };
