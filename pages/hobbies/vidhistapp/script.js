@@ -1,3 +1,26 @@
+function loadSlide(slideName) {
+  slideData.map(item => {
+    if (item.slideName == slideName) {
+      viewer.open(item.imgLoc);
+      video.src = item.videoLoc;
+      document.getElementById("slideInfo").innerHTML = item.slideDescription;
+      document
+        .getElementById("videoTab")
+        .getElementsByClassName("mydivheader")[0].innerHTML = item.videoTitle;
+      document
+        .getElementById("histology")
+        .getElementsByClassName("mydivheader")[0].innerHTML = item.imgTitle;
+      console.log("Successfully loaded new slide");
+    }
+  });
+
+  // alert(
+  //   "You clicked on slide " +
+  //     slideName +
+  //     " however we currently don't have that slide available"
+  // );
+}
+
 function slidePosition() {
   if (this.currentTime > 2 && this.currentTime < 3) {
     moveViewPort(0.3, 0.3, 5);
@@ -8,16 +31,8 @@ function slidePosition() {
   }
 }
 
-function loadSlide(slideName) {
-  console.log(slideName);
-  alert(
-    "You clicked on slide " +
-      slideName +
-      " however we currently don't have that slide available"
-  );
-}
-
 // do not change anything after this
+
 var viewer = OpenSeadragon({
   id: "openseadragon",
   prefixUrl: "./openseadragon-bin-2.4.1/images/",
@@ -32,6 +47,7 @@ window.onload = function() {
   video.src = "./Histology slide A/videoA/Histology of the Kidney.mp4";
   video.addEventListener("timeupdate", slidePosition, false);
   document.getElementById("myVideo").appendChild(video);
+  loadSlide("ye17");
 };
 
 function moveViewPort(posX, posY, zoomDeg) {
@@ -39,12 +55,12 @@ function moveViewPort(posX, posY, zoomDeg) {
   viewPort.zoomTo(zoomDeg);
 }
 
-var slideData = JSON.parse(slidedata);
 console.log(slideData);
 
 // Make the DIV element draggable:
 dragElement(document.getElementById("videoTab"));
 dragElement(document.getElementById("histology"));
+dragElement(document.getElementById("infoTab"));
 
 function dragElement(elmnt) {
   var pos1 = 0,

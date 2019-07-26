@@ -1,16 +1,30 @@
+html {
+  background-color: #e4e4e4;
+}
 body {
   background-color: white;
   overflow: hidden;
 }
 
 #videoTab,
-#histology {
+#histology,
+#infoTab {
   position: absolute;
   z-index: 9;
   background-color: #f1f1f1;
   border: 1px solid #d3d3d3;
   text-align: center;
   width: 500px;
+}
+#slideInfo {
+  height: 200px;
+  bottom: 200px;
+}
+
+#infoTab {
+  bottom: 1000;
+  right: 0;
+  top: 50%;
 }
 
 #histology {
