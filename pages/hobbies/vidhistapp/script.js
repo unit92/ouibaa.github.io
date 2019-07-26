@@ -39,6 +39,9 @@ function moveViewPort(posX, posY, zoomDeg) {
   viewPort.zoomTo(zoomDeg);
 }
 
+var slideData = JSON.parse(slidedata);
+console.log(slideData);
+
 // Make the DIV element draggable:
 dragElement(document.getElementById("videoTab"));
 dragElement(document.getElementById("histology"));
