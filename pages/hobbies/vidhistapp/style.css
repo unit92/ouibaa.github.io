@@ -19,6 +19,8 @@ body {
 #slideInfo {
   height: 200px;
   bottom: 200px;
+  padding: 0px 10px 10px 10px;
+  overflow: auto;
 }
 
 #infoTab {
