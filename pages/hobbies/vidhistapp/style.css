@@ -14,9 +14,10 @@ body {
 }
 
 #histology {
-  width: 70%;
+  width: 50%;
   height: 70%;
   z-index: 8;
+  left: 250px;
 }
 
 #videoTab {
@@ -27,7 +28,7 @@ body {
   padding: 5px;
   cursor: move;
   z-index: 10;
-  background-color: lightcoral;
+  background-color: #3c3d3db2;
   color: #fff;
   font-family: sans-serif;
   height: 20px;
@@ -40,4 +41,33 @@ body {
 
 #Myvideo {
   width: 100%;
+}
+
+.side-nav {
+  background: #fff;
+  position: relative;
+  width: 250px;
+  height: 100%;
+  background: #e5ebea;
+}
+
+.side-nav-list {
+  position: relative;
+  top: 50px;
+  padding: 10 10 10 10;
+  border: 10px;
+}
+
+.side-nav-list-item {
+  position: relative;
+  background-color: #6b6e6e3d;
+  height: 50px;
+  margin-bottom: 10px;
+  padding: 5px 15px;
+  transition: 0.5s ease;
+}
+
+.side-nav-list-item:hover {
+  background-color: rgba(128, 244, 224, 0.7);
+  cursor: pointer;
 }

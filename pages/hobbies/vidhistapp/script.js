@@ -2,11 +2,19 @@ function slidePosition() {
   if (this.currentTime > 2 && this.currentTime < 3) {
     moveViewPort(0.3, 0.3, 5);
   } else if (this.currentTime > 5 && this.currentTime < 6) {
-    document.getElementById("Example").innerHTML = "";
     moveViewPort(0.7, 0.1, 2);
   } else if (this.currentTime > 10 && this.currentTime < 11) {
     moveViewPort(0.7, 0.19, 5);
   }
+}
+
+function loadSlide(slideName) {
+  console.log(slideName);
+  alert(
+    "You clicked on slide " +
+      slideName +
+      " however we currently don't have that slide available"
+  );
 }
 
 // do not change anything after this
