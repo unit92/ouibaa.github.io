@@ -1,3 +1,15 @@
+function slidePosition() {
+  if (this.currentTime > 2 && this.currentTime < 3) {
+    moveViewPort(0.3, 0.3, 5);
+  } else if (this.currentTime > 5 && this.currentTime < 6) {
+    document.getElementById("Example").innerHTML = "";
+    moveViewPort(0.7, 0.1, 2);
+  } else if (this.currentTime > 10 && this.currentTime < 11) {
+    moveViewPort(0.7, 0.19, 5);
+  }
+}
+
+// do not change anything after this
 var viewer = OpenSeadragon({
   id: "openseadragon",
   prefixUrl: "./openseadragon-bin-2.4.1/images/",
@@ -10,18 +22,9 @@ window.onload = function() {
   video.setAttribute("id", "Myvideo");
   video.setAttribute("controls", "controls");
   video.src = "./Histology slide A/videoA/Histology of the Kidney.mp4";
-  video.addEventListener("timeupdate", myfunc, false);
+  video.addEventListener("timeupdate", slidePosition, false);
   document.getElementById("myVideo").appendChild(video);
 };
-
-function myfunc() {
-  if (this.currentTime > 2 && this.currentTime < 3) {
-    moveViewPort(0.3, 0.3, 5);
-  } else if (this.currentTime > 5 && this.currentTime < 6) {
-    document.getElementById("Example").innerHTML = "";
-    moveViewPort(0.7, 0.1, 2);
-  }
-}
 
 function moveViewPort(posX, posY, zoomDeg) {
   viewPort.panTo(new OpenSeadragon.Point(posX, posY));
@@ -75,3 +78,15 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+
+//function to output points on the slide
+var update_points = setInterval(function() {
+  console.log(
+    "(x, y, zoom) is " +
+      Math.round(viewPort.getCenter().x * 100) / 100 +
+      ", " +
+      Math.round(viewPort.getCenter().y * 100) / 100 +
+      ", " +
+      Math.round(viewPort.getZoom() * 100) / 100
+  );
+}, 3000);
