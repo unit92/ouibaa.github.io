@@ -64,7 +64,8 @@ body {
   height: 50px;
   margin-bottom: 10px;
   padding: 5px 15px;
-  transition: 0.5s ease;
+  border-radius: 5%;
+  transition: 0.3s ease;
 }
 
 .side-nav-list-item:hover {
