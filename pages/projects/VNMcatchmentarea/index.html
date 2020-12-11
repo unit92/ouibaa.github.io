@@ -19,20 +19,145 @@
         <a href="../../educational_resources">Educational resources</a>
         <a href="../../presentations">Presentations</a>
         <a href="../../hobbies">Things I do for fun</a>
-        <a href="../../about"><div id="active-tab">About me</div></a>
+        <a href="../../about">About me</div></a>
       </div>
     </nav>
     <main>
       <div id="content">
-        <div id="intro">
-          <h1>Part 1</h1>
+        <div class="topic" id="background">
+          <br>
+          <h1>Background</h1>
+          <br>
+          <p>This site contains documentation regarding the development of catchment area maps, specifically focusing on Ho Chi Minh City (HCMC) in Vietnam (VNM)</p> <br>
+          <p>This was originally developed for my MD project at the University of Sydney</p> <br>
+          <p>Powerpoints which were presented throughout this MD project are available at <a href="./An evaluation of hospital catchment area algorithms.pptx">this link.</a></p><br>
+          <p>Use the following navigation menu to find specific resources and information:</p> <br>
+          <div class="linklist">
+            <ul>
+              <li><a href="#intro">Part 1: Introduction to catchment area maps</a></li>
+              <li><a href="#loading">Part 2: Loading GADM basemaps into qGIS</a></li>
+              <li><a href="#loading_data">Part 3: Loading patient address (WGS84) data into qGIS</a></li>
+              <li><a href="http://en.wikipedia.org/wiki/Rugby_football">Rugby</a></li>
+              <li><a href="http://en.wikipedia.org/wiki/Rugby_football">Rugby</a></li>
+              <li><a href="http://en.wikipedia.org/wiki/Rugby_football">Rugby</a></li>
+              <li><a href="http://en.wikipedia.org/wiki/Rugby_football">Rugby</a></li>
+              <li><a href="http://en.wikipedia.org/wiki/Rugby_football">Rugby</a></li>
+              <li><a href="http://en.wikipedia.org/wiki/Rugby_football">Rugby</a></li>
+              <li><a href="http://en.wikipedia.org/wiki/Rugby_football">Rugby</a></li>
+              <li><a href="http://en.wikipedia.org/wiki/Rugby_football">Rugby</a></li>
+              <li><a href="http://en.wikipedia.org/wiki/Rugby_football">Rugby</a></li>
+              <li><a href="http://en.wikipedia.org/wiki/Rugby_football">Rugby</a></li>
+              </ul>
+          </div>
+        </div>
+        <div id="intro" class="topic">
+          <h1>Part 1: Introduction to catchment area maps</h1>
+          <br>
+          <p>A link to the powerpoint shown in the video below is at <a href="">this link.</a></p>
+
           <video width="60%" controls>
             <source src="./media/0_intro.m4v" type="video/mp4">
+          Your browser does not support the video tag.
+          </video> <br>
+        </div>
+        <div class="topic" id="loading">
+          <h1>Part 2: Loading GADM basemaps into qGIS </h1>
+          <br>
+          <video width="60%" controls>
+            <source src="./media/1_basemap.m4v" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+          <div class="videoinfo">
+            <p>Steps involved in loading maps into qGIS are:</p>
+            <ol>
+              <li>Download the latest Vietnam Geopackage from the <a href="https://gadm.org/download_country_v3.html ">GADM website</a></li>
+              <li>Open qGIS and open a new project file</li>
+              <li>Open the Data source manager</li>
+              <li>Add the geopackage downloaded from step (1) and include 'gadm36_VNM_3', which is the MultiPolygon geometries for the ward-level</li>
+              <li>A map of Vietnam should now appear</li>
+              <li><b>Don't forget to save!</b></li>
+            </ol>
+          </div>
+        </div>
+        <div class="topic" id="loading_data">
+          <h1>Part 3: Loading data into qGIS (Haversine)</h1>
+          <video width="60%" controls>
+            <source src="./media/2_loading data.m4v" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+          <div class="videoinfo">
+            <p>Steps involved in loading patient data into qGIS are:</p>
+            <ol>
+              <li>Prepare your data to include patient IDs, latitudes and longitudes, and distances (Haversine distances in this video) in a "csv" format</li>
+              <li>In qGIS, click "layout" in the toolbar and select "add layout", "Delimited text file"</li>
+              <li>Link qGIS to your file path under 'file name'</li>
+              <li>You can name your layer name whatever you want, but don't name it something confusing as it will become an issue later</li>
+              <li>Geometry CRS option needs to be selected as 'project CRS'</li>
+              <li>You can look at the sample data - it should be the same as the csv file</li>
+              <li>Add this file to your map - you should see all the points overlaying the map now</li>
+            </ol>
+            <br>
+            <p>Details into what the Haversine formula can be found <a href="https://en.wikipedia.org/wiki/Haversine_formula">here</a></p>
+          </div>
+        </div>
+        <div class="topic" id="heatmap">
+          <h1>Part 4: Generating heatmaps</h1>
+          <video width="60%" controls>
+            <source src="./media/3_heatmaps.m4v" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="topic" id="aesthetics">
+          <h1>Part 5: Making your maps look better</h1>
+          <video width="60%" controls>
+            <source src="./media/4_aesthetics.m4v" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="topic" id="dmdistance">
+          <h1>Part 6: Calculating Distance matrix distance catchment areas</h1>
+          <video width="60%" controls>
+            <source src="./media/5_dmdistance.m4v" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="topic" id="dmduration">
+          <h1>Part 7: Caclulating Distance matrix duration catchment areas</h1>
+          <video width="60%" controls>
+            <source src="./media/6_dmduration.m4v" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="topic" id="CCRintro">
+          <h1>Part 8: Introduction to Cumulative Case Ratios</h1>
+          <video width="60%" controls>
+            <source src="./media/7_CCRintro.m4v" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="topic" id="CCRdata">
+          <h1>Part 9A: Data for cumulative case ratio maps</h1>
+          <video width="60%" controls>
+            <source src="./media/8_1_ccrdata.m4v" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="topic" id="CCRdatageneration">
+          <h1>Part 9B: Generating data for cumulative case ratio maps</h1>
+          <video width="60%" controls>
+            <source src="./media/8_2_ccrdata_generation.m4v" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="topic" id="CCRmaps">
+          <h1>Part 9C: Generating cumulative case ratio maps</h1>
+          <video width="60%" controls>
+            <source src="./media/8_3_ccrmaps.m4v" type="video/mp4">
           Your browser does not support the video tag.
           </video>
         </div>
       </div>
-
+      <div id="footer"></div>
     </main>
 </body>
 </html>
