@@ -1,2 +1,2 @@
-# Histology Blue-12 Demo
- Demonstration client-side ONLY application of Blue-12 Histology slide. Permission to host obtained from Dr. Suzanne Ollerenshaw at the University Of Sydney Department of Anatomy and Histology. This application is for demonstration purposes only for the development of a fuller-featured full-stack histology application. Application has been built with OpenSeaDragon.
+# Condyloma Acuminatum H+E Stain
+ Demonstration client-side ONLY application of Dental histopathology slide. Permission to host obtained from Dr Babak Sarrafpour from the University of Sydney . This application is simply a demonstration of OpenSeaDragon with navigation using a dental slide. This is for demonstration purposes ONLY, or for the development of a fuller-featured full-stack histology application.
